@@ -10,5 +10,4 @@ public class JpabookApplication {
         SpringApplication.run(JpabookApplication.class, args);
     }
 
-
 }
