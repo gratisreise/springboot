@@ -1,12 +1,10 @@
-package jpabook.jpabook.domain.item;
+package jpabook.jpabook.domain;
 
 
-import jpabook.jpabook.domain.item.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
