@@ -50,4 +50,21 @@ public class MemberController {
         return "members/memberList";
     }
 
+    @PostMapping("/members/new")
+    public String create(MemberForm form, BindingResult result){
+
+        if(result.hasErrors()){
+            return "members/createMemberForm";
+        }
+
+        Address address = new Address(form.getCity(), form.getStreet(), form.getZipcode());
+
+        Member member = new Member();
+        member.setName(form.getName());
+        member.setAddress(address);
+
+        memberService.join(member);
+        return "redirect:/";
+
+    }
 }
