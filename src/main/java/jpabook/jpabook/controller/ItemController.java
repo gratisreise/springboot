@@ -67,14 +67,16 @@ public class ItemController {
     public String updateItem(@ModelAttribute("form") BookForm form){
 
         Book book = new Book();
-        book.setId(form.getId);
-        book.setName(form.getName);
-        book.setPrice(form.getPrice);
-        book.setStockQuantity(form.getSockQuantity);
-        book.setAuthor(form.getAuthor);
-        book.setIsbn(form.getIsbn);
+//        book.setId(form.getId);
+//        book.setName(form.getName);
+//        book.setPrice(form.getPrice);
+//        book.setStockQuantity(form.getSockQuantity);
+//        book.setAuthor(form.getAuthor);
+//        book.setIsbn(form.getIsbn);
 
-        itemService.savedItem(book);
+
+        itemService.updateItem(itemId, form.getName(), form.getPrice(), form.getStockQuantity());
+
         return "redirect:/items";
     }
 }
