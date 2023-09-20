@@ -16,11 +16,12 @@ public class JpaMain {
 
         try{
             Member member = new Member();
-            member.setId(2L);
-            member.getUsername("B");
-            member.setRoleType(RoleType.GUEST);
+            member.setUsername("C");
 
+            System.out.println("============ ");
             em.persist(member);
+            System.out.println("member.Id() = " + member.getId());
+            System.out.println("============ ");
 
             tx.commit();
         } catch (Exception e){
