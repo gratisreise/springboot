@@ -18,8 +18,8 @@ public class Member {
 //    @Column(name = "TEAM_ID")
 //    private Long teamId;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "TAM_ID")
+    @ManyToOne
+    @JoinColumn(name = "TEAM_ID")
     private Team team;
 
     public Long getId() {
